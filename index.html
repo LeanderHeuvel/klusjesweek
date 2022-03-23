@@ -1,78 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Is het al klusjesweek? - Ontdek het hier!</title>
-  <meta name="description" content="Moet Mats deze week écht zijn stoel komen? - Je leest het hier!">
+<head> 
+  <meta name="theme-color" content="#ffb300" />
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>Huize 'Achterom' - klusjesweek</title>
+  <meta name="description" content="Vind je jouw klusje online!">
   <!-- <meta property="og:image" content="//cdn.example.com/uploads/images/webpage_300x200.png"> -->
 </head>
 <style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
-#myTable {
-
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width:95%;
-  margin:10px;
-}
-
-#myTable td, #myTable th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#myTable tr:nth-child(even){background-color: #78909C;}
-
-#myTable tr:hover {background-color: #c2c2c2;}
-
-#myTable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #37474F;
-  color: white;
-  font-size: 30px;
-}
-
-.bgimg {
-  /* background-image: url('/w3images/forestbridge.jpg'); */
-  /* background-color:black; */
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
-
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-}
-
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
-
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width:100%;
-}
-
-hr {
-  margin: auto;
-  width: 40%;
-}
+  
 </style>
 <body>
 
@@ -81,25 +17,32 @@ hr {
     <p></p>
   </div>
   <div class="middle">
-    <h1>Is het klusjesweek?</h1>
+    <h1>Huize 'Achterom' Klusjesweek</h1>
     <hr>
     <p id="demo" style="font-size:30px"></p>
   <table id="myTable" style=" overflow-x:auto;">
   <tr>
-    <th>Vloer</th>
-    <th>Gang</th>
-    <th>Badkamer</th>
-    <th>Keuken</th>
-    <th>WC</th>
-    <th>Glas</th>
+    <th>Naam</th>
+    <th>Klusje</th>
+
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td></td><td>Vloer</td>
+  </tr>
+  <tr>
+    <td>yeah</td><td>Gang</td>
+  </tr>
+  <tr>
+    <td>w</td><td>Badkamer</td>
+  </tr>
+  <tr>
+    <td></td><td>Keuken</td>
+  </tr>
+  <tr>
+    <td></td><td>WC</td>
+  </tr>
+  <tr>
+    <td></td><td>Glas</td>
   </tr>
 </table>
   </div>
@@ -110,9 +53,8 @@ hr {
 
 <script>
 // Set the date we're counting down to
-  var startDate = new Date("May 18, 2020 00:00:00").getTime();
-  var names = ["Matsycosi","Annalyn","Nordin","Vovo","Leo","Pupper"]
-
+  var startDate = new Date("May 25, 2020 00:00:00").getTime();
+  var names = ["Matsycosi","Achterhoeker","Knorrie","Karly","Koning","Jasmijn"]
 
   // Get todays date and time
   var now = new Date().getTime();
@@ -125,12 +67,12 @@ hr {
   var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
 
 
-  var row = document.getElementById("myTable").rows[1].cells;
+  var row = document.getElementById("myTable").rows;
+  console.log(row)
   for(i=0;i<names.length;i++){
-    row[(i+weeks)%6].innerHTML = names[i]
+    row[(i+weeks)%6+1].cells[0].innerHTML = names[i]
   }
-  document.getElementById("demo").innerHTML = "Het is klusjesweek!!!!";
-  document.body.style.backgroundColor = "#008f00";
+
 </script>
 
 </body>
